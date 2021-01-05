@@ -69,7 +69,12 @@ Blockly.Css.inject = function(hasCss, pathToMedia) {
   cssNode.id = 'blockly-common-style';
   var cssTextNode = document.createTextNode(text);
   cssNode.appendChild(cssTextNode);
-  document.head.insertBefore(cssNode, document.head.firstChild);
+
+  if (Blockly.shadowRoot) {
+    Blockly.shadowRoot.appendChild(cssNode);
+  } else {
+    document.head.insertBefore(cssNode, document.head.firstChild);
+  }
 };
 
 /**
