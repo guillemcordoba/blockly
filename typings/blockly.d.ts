@@ -52,6 +52,7 @@ declare module Blockly {
     };
     renderer?: string;
     parentWorkspace?: Blockly.WorkspaceSvg;
+    shadowRoot?: ShadowRoot;
   }
 
   interface BlocklyThemeOptions {
