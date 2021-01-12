@@ -43,7 +43,7 @@
     "test:compile:advanced": "gulp buildAdvancedCompilationTest",
     "typings": "gulp typings",
     "updateGithubPages": "gulp gitUpdateGithubPages",
-    "publish-to-branch": "npm run build && cp dist-package.json dist/ && gh-pages -b build -d dist"
+    "publish-to-branch": "npm run prepare && cp dist-package.json dist/ && gh-pages -b build -d dist"
   },
   "main": "./index.js",
   "umd": "./blockly.min.js",
