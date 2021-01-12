@@ -159,7 +159,7 @@ Blockly.DropDownDiv.createDom = function() {
   }
   var div = document.createElement('div');
   div.className = 'blocklyDropDownDiv';
-  var container = Blockly.parentContainer || document.body;
+  var container = Blockly.parentContainer || Blockly.shadowRoot || document.body;
   container.appendChild(div);
   /**
    * The div element.
