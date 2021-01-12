@@ -333,7 +333,7 @@ Blockly.utils.dom.getFastTextWidthWithSizeString = function(textElement,
     var computeCanvas = document.createElement('canvas');
     computeCanvas.className = 'blocklyComputeCanvas';
     if (Blockly.shadowRoot) {
-      Blockly.shadowRoot.appendChild(cssNode);
+      Blockly.shadowRoot.appendChild(computeCanvas);
     } else {
       document.body.appendChild(computeCanvas);
     }  
